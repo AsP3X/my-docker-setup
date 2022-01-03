@@ -13,10 +13,12 @@ if [ -z "$1" ]; then
 fi
 
 persistant_path=$1
+# create keys_path and replace /data with /keys
+keys_path=$(echo $persistant_path | sed 's/data/keys/g')
 
 # check if the keys directory exists
 if [ ! -d "$persistant_path/keys" ]; then
-   mkdir $persistant_path/keys
+   mkdir $keys_path
 fi
 
 read -p "username: " cvpn_username
@@ -50,7 +52,7 @@ else
   docker run -v ${persistant_path}:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full ${cvpn_username} ${cvpn_password}
 fi
 
-docker run -v ${persistant_path}:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient ${cvpn_username} > keys/${cvpn_username}.ovpn
+docker run -v ${persistant_path}:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient ${cvpn_username} > ${keys_path}/${cvpn_username}.ovpn
 
 echo "The client ${cvpn_username} has been generated"
 echo "You can find the client in ${keys_path}/${cvpn_username}.ovpn"
