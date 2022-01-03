@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+
+  REPLACE_WITH_CONTAINER_NAME:
+    image: kylemanna/openvpn
+    container_name: REPLACE_WITH_CONTAINER_NAME
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - REPLACE_WITH_NETWORK_NAME
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 1194:1194/udp
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - REPLACE_WITH_PERSISTANT_PATH:/etc/openvpn
+    #labels:
+    #- "traefik.enable=true"
+    # - "traefik.http.routers.openvpn.entrypoints=http"
+    # - "traefik.http.routers.openvpn.rule=Host(`vpn.${DOMAIN}`)"
+    # - "traefik.http.middlewares.openvpn-https-redirect.redirectscheme.scheme=https"
+    # - "traefik.http.routers.openvpn.middlewares=openvpn-https-redirect"
+    # - "traefik.http.routers.openvpn-secure.entrypoints=https"
+    # - "traefik.http.routers.openvpn-secure.rule=Host(`vpn.${DOMAIN}`)"
+    # - "traefik.http.routers.openvpn-secure.tls=true"
+    # - "traefik.http.routers.openvpn-secure.tls.certresolver=${CERT_RESOLVER}"
+    # - "traefik.http.routers.openvpn-secure.service=openvpn"
+    # - "traefik.http.services.openvpn.loadbalancer.server.port=9000"
+    # - "traefik.docker.network=traefik-proxy"
+
+networks:
+  REPLACE_WITH_NETWORK_NAME:
+    external: true
