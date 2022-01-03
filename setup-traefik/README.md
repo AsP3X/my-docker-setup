@@ -1,4 +1,4 @@
-# Create Traefik and Portainer
+# Create Traefik and Portainer [UBUNTU]
 `Traefik and portainer with docker and letsencrypt`
 <br>
 
@@ -30,6 +30,9 @@
 
 ## Step 2:
   - Install docker on your machine:
+  
+  Make sure you are using ubuntu otherwise you have to install docker via the instructions on the docker website for the linux install you are using.
+  
   ```bash
   $ sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
   $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
