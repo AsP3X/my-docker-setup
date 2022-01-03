@@ -39,4 +39,9 @@
   $ sudo apt update
   $ sudo apt install docker-ce
   ```
+  <br>
 
+  - Install docker-compose on your machine:
+  ```bash
+  $ sudo apt install docker-compose
+  ```
