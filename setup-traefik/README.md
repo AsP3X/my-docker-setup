@@ -90,6 +90,10 @@
   ```bash
   possible services:
   - apache2	
+
+  to stop the service:
+  - sudo systemctl stop apache2
+  - sudo systemctl disable apache2
   ```
 
   - Start the docker containers:
