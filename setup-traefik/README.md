@@ -73,10 +73,11 @@
 `Traefik and portainer with docker and letsencrypt`
 
 ## Step 1:
-  - Create DNS records for your domain:
   ```DNS
-  *.YOURDOMAIN.END => SERVERIP
-  YOURDOMAIN.END => SERVERIP
+  If not already done create the following DNS A-Records:
+
+  *.YOURDOMAIN.END  => SERVERIP
+  YOURDOMAIN.END    => SERVERIP
   ```
 
 ## Step 2:
