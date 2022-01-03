@@ -65,3 +65,40 @@
   - Please relogin to your machine to make sure your user is added to the docker group.
   `id -nG`
 
+<hr>
+<br>
+<br>
+
+# Setup Traefik and Portainer
+`Traefik and portainer with docker and letsencrypt`
+
+## Step 1:
+  - Create DNS records for your domain:
+  ```DNS
+  *.YOURDOMAIN.END => SERVERIP
+  YOURDOMAIN.END => SERVERIP
+  ```
+
+## Step 2:
+  - Start the docker containers:
+  ```bash
+  $ docker-compose up
+  ```
+
+  - Check if the containers are running and no errors occured:
+
+  - Then stop the containers and restart them in the background:
+  ```bash
+  $ docker-compose down
+  $ docker-compose up -d
+  ```
+
+## Step 3:
+  - Check if traefik is accessible via:
+  `https://traefik.YOURDOMAIN.END`
+  - Check if traefik has no errors on the page of the traefik dashboard
+
+  ---
+  - Check if portainer is accessible via:
+  `https://portainer.YOURDOMAIN.END`
+  - Check if portainer has no errors on the page of the portainer dashboard
