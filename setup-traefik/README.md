@@ -81,8 +81,14 @@
   ```
 
 ## Step 2:
+  - Create the traefik-proxy network:
+  ```bash
+  $ docker network create traefik-proxy
+  ```
+  
   - Start the docker containers:
   ```bash
+  $ cd traefik
   $ docker-compose up
   ```
 
