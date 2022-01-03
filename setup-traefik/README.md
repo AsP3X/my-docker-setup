@@ -3,7 +3,7 @@
 <br>
 
 ## Step 1:
-  - create following folder structure at a location of your choise
+  - Create following folder structure at a location of your choise
 
   ```tree
   traefik/
@@ -14,7 +14,7 @@
   ```
   <br>
 
-  - then create a `.env` file with the following content:
+  - Then create a `.env` file with the following content:
   ```dotenv
   DOMAIN=YOUR_DOMAIN
   EMAIL=YOUR_EMAIL
@@ -24,12 +24,12 @@
   ```
   <br>
 
-  - generate a password hash with the following command:
+  - Generate a password hash with the following command:
   `htpasswd -nBC 10 root`
-  - take the part after the `root:` and put it in the `TRAEFIK_PASSWORD_HASH` variable
+  - Take the part after the `root:` and put it in the `TRAEFIK_PASSWORD_HASH` variable
 
 ## Step 2:
-  - install following packages:
+  - Install docker on your machine:
   ```bash
   $ sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
   $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
