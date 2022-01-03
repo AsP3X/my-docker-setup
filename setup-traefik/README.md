@@ -2,6 +2,12 @@
 `Traefik and portainer with docker and letsencrypt`
 <br>
 
+## ORDER:
+- Create folder structure
+- Create .env file with configuration
+- Generate password hash
+- Install packages
+
 ## Step 1:
   - Create following folder structure at a location of your choise
 
@@ -58,3 +64,4 @@
 
   - Please relogin to your machine to make sure your user is added to the docker group.
   `id -nG`
+
