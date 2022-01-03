@@ -119,3 +119,7 @@
   - Check if portainer is accessible via:
   `https://portainer.YOURDOMAIN.END`
   - Check if portainer has no errors on the page of the portainer dashboard
+
+  ---
+  - Whoami is available at the root domain:
+  `https://YOURDOMAIN.END`
