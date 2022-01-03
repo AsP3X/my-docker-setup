@@ -85,7 +85,13 @@
   ```bash
   $ docker network create traefik-proxy
   ```
-  
+
+  - Make sure the port 80 is open on your machine and not already used by another service:
+  ```bash
+  possible services:
+  - apache2	
+  ```
+
   - Start the docker containers:
   ```bash
   $ cd traefik
